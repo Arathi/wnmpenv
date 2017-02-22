@@ -41,14 +41,14 @@
             this.btnOpenPhpIniParser.UseVisualStyleBackColor = true;
             this.btnOpenPhpIniParser.Click += new System.EventHandler(this.btnOpenPhpIniParser_Click);
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btnOpenPhpIniParser);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormMain";
+            this.Text = "WNMPanel";
             this.ResumeLayout(false);
 
         }

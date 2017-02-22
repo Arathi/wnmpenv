@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WNMPanel", "WNMPanel\WNMPan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhpIniParser", "PhpIniParser\PhpIniParser.csproj", "{6B33618A-D876-4606-867C-67CE5923B546}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LzmaSdk", "LzmaSdk\LzmaSdk.csproj", "{66149ABB-843C-4F11-9698-C81750A3048D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6B33618A-D876-4606-867C-67CE5923B546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B33618A-D876-4606-867C-67CE5923B546}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B33618A-D876-4606-867C-67CE5923B546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66149ABB-843C-4F11-9698-C81750A3048D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66149ABB-843C-4F11-9698-C81750A3048D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66149ABB-843C-4F11-9698-C81750A3048D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66149ABB-843C-4F11-9698-C81750A3048D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
