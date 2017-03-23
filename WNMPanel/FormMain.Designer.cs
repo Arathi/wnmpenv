@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnOpenPhpIniParser = new System.Windows.Forms.Button();
+            this.btnTestUnzip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpenPhpIniParser
@@ -41,11 +42,22 @@
             this.btnOpenPhpIniParser.UseVisualStyleBackColor = true;
             this.btnOpenPhpIniParser.Click += new System.EventHandler(this.btnOpenPhpIniParser_Click);
             // 
+            // btnTestUnzip
+            // 
+            this.btnTestUnzip.Location = new System.Drawing.Point(12, 217);
+            this.btnTestUnzip.Name = "btnTestUnzip";
+            this.btnTestUnzip.Size = new System.Drawing.Size(75, 23);
+            this.btnTestUnzip.TabIndex = 1;
+            this.btnTestUnzip.Text = "button1";
+            this.btnTestUnzip.UseVisualStyleBackColor = true;
+            this.btnTestUnzip.Click += new System.EventHandler(this.btnTestUnzip_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnTestUnzip);
             this.Controls.Add(this.btnOpenPhpIniParser);
             this.Name = "FormMain";
             this.Text = "WNMPanel";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnOpenPhpIniParser;
+        private System.Windows.Forms.Button btnTestUnzip;
     }
 }
 

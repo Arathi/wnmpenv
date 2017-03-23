@@ -113,6 +113,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LzmaSdk\LzmaSdk.csproj">
+      <Project>{66149abb-843c-4f11-9698-c81750a3048d}</Project>
+      <Name>LzmaSdk</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PhpIniParser\PhpIniParser.csproj">
       <Project>{6b33618a-d876-4606-867c-67ce5923b546}</Project>
       <Name>PhpIniParser</Name>
