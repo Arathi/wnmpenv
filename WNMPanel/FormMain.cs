@@ -110,7 +110,30 @@ namespace wnmpenv.WNMPanel
 
         private void btnMysqldSwitch_Click(object sender, EventArgs e)
         {
+            string curDir = Environment.CurrentDirectory;
+            string workDir = curDir + @"\mariadb";
+            string mysqldBin = workDir + @"\bin\mysqld.exe";
 
+            ProcessStartInfo startInfo = new ProcessStartInfo(mysqldBin);
+            startInfo.WorkingDirectory = workDir;
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            if (mysqld == null)
+            {
+                // 启动
+                btnMysqldSwitch.Text = "正在启动";
+                btnMysqldSwitch.Enabled = false;
+                mysqld = Process.Start(startInfo);
+            }
+            else
+            {
+                // 停止
+                startInfo.FileName = "taskkill.exe";
+                startInfo.Arguments = "/F /PID " + mysqld.Id + " /T";
+                btnMysqldSwitch.Text = "正在停止";
+                Process.Start(startInfo);
+                btnMysqldSwitch.Enabled = false;
+            }
         }
 
         private void btnPhpCgiSwitch_Click(object sender, EventArgs e)

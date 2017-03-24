@@ -41,11 +41,11 @@
             this.btnMysqldRestart = new System.Windows.Forms.Button();
             this.btnPhpCgiRestart = new System.Windows.Forms.Button();
             this.cron = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNginxConfig = new System.Windows.Forms.Button();
             this.btnStartAll = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnMysqlConfig = new System.Windows.Forms.Button();
+            this.btnLocalhost = new System.Windows.Forms.Button();
+            this.btnMysqlConsole = new System.Windows.Forms.Button();
             this.btnVersionSwitch = new System.Windows.Forms.Button();
             this.labelNginx = new System.Windows.Forms.Label();
             this.labelMysqld = new System.Windows.Forms.Label();
@@ -166,14 +166,14 @@
             this.cron.Interval = 500;
             this.cron.Tick += new System.EventHandler(this.cron_Tick);
             // 
-            // button1
+            // btnNginxConfig
             // 
-            this.button1.Location = new System.Drawing.Point(272, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "编辑配置";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNginxConfig.Location = new System.Drawing.Point(272, 18);
+            this.btnNginxConfig.Name = "btnNginxConfig";
+            this.btnNginxConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnNginxConfig.TabIndex = 11;
+            this.btnNginxConfig.Text = "编辑配置";
+            this.btnNginxConfig.UseVisualStyleBackColor = true;
             // 
             // btnStartAll
             // 
@@ -184,32 +184,32 @@
             this.btnStartAll.Text = "全部启动";
             this.btnStartAll.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnMysqlConfig
             // 
-            this.button3.Location = new System.Drawing.Point(272, 51);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "编辑配置";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMysqlConfig.Location = new System.Drawing.Point(272, 51);
+            this.btnMysqlConfig.Name = "btnMysqlConfig";
+            this.btnMysqlConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnMysqlConfig.TabIndex = 13;
+            this.btnMysqlConfig.Text = "编辑配置";
+            this.btnMysqlConfig.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnLocalhost
             // 
-            this.button4.Location = new System.Drawing.Point(353, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "打开首页";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLocalhost.Location = new System.Drawing.Point(353, 18);
+            this.btnLocalhost.Name = "btnLocalhost";
+            this.btnLocalhost.Size = new System.Drawing.Size(75, 23);
+            this.btnLocalhost.TabIndex = 14;
+            this.btnLocalhost.Text = "打开首页";
+            this.btnLocalhost.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnMysqlConsole
             // 
-            this.button5.Location = new System.Drawing.Point(353, 51);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "控制台";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMysqlConsole.Location = new System.Drawing.Point(353, 51);
+            this.btnMysqlConsole.Name = "btnMysqlConsole";
+            this.btnMysqlConsole.Size = new System.Drawing.Size(75, 23);
+            this.btnMysqlConsole.TabIndex = 15;
+            this.btnMysqlConsole.Text = "控制台";
+            this.btnMysqlConsole.UseVisualStyleBackColor = true;
             // 
             // btnVersionSwitch
             // 
@@ -256,11 +256,11 @@
             this.Controls.Add(this.labelMysqld);
             this.Controls.Add(this.labelNginx);
             this.Controls.Add(this.btnVersionSwitch);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnMysqlConsole);
+            this.Controls.Add(this.btnLocalhost);
+            this.Controls.Add(this.btnMysqlConfig);
             this.Controls.Add(this.btnStartAll);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNginxConfig);
             this.Controls.Add(this.btnPhpCgiRestart);
             this.Controls.Add(this.btnMysqldRestart);
             this.Controls.Add(this.btnNginxRestart);
@@ -294,11 +294,11 @@
         private System.Windows.Forms.Button btnMysqldRestart;
         private System.Windows.Forms.Button btnPhpCgiRestart;
         private System.Windows.Forms.Timer cron;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNginxConfig;
         private System.Windows.Forms.Button btnStartAll;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnMysqlConfig;
+        private System.Windows.Forms.Button btnLocalhost;
+        private System.Windows.Forms.Button btnMysqlConsole;
         private System.Windows.Forms.Button btnVersionSwitch;
         private System.Windows.Forms.Label labelNginx;
         private System.Windows.Forms.Label labelMysqld;
