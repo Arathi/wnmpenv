@@ -2,3 +2,6 @@
 */bin/
 */obj/
 packages/
+WNMPanel/Archives/*
+!WNMPanel/Archives/.gitkeep
+*.csproj.user

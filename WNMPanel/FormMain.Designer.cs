@@ -28,40 +28,255 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnOpenPhpIniParser = new System.Windows.Forms.Button();
             this.btnTestUnzip = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnNginxSwitch = new System.Windows.Forms.Button();
+            this.btnMysqldSwitch = new System.Windows.Forms.Button();
+            this.btnPhpCgiSwitch = new System.Windows.Forms.Button();
+            this.btnNginxRestart = new System.Windows.Forms.Button();
+            this.btnMysqldRestart = new System.Windows.Forms.Button();
+            this.btnPhpCgiRestart = new System.Windows.Forms.Button();
+            this.cron = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnStartAll = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnVersionSwitch = new System.Windows.Forms.Button();
+            this.labelNginx = new System.Windows.Forms.Label();
+            this.labelMysqld = new System.Windows.Forms.Label();
+            this.labelPhpCgi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOpenPhpIniParser
             // 
-            this.btnOpenPhpIniParser.Location = new System.Drawing.Point(151, 217);
+            this.btnOpenPhpIniParser.Location = new System.Drawing.Point(272, 85);
             this.btnOpenPhpIniParser.Name = "btnOpenPhpIniParser";
-            this.btnOpenPhpIniParser.Size = new System.Drawing.Size(126, 23);
+            this.btnOpenPhpIniParser.Size = new System.Drawing.Size(75, 23);
             this.btnOpenPhpIniParser.TabIndex = 0;
-            this.btnOpenPhpIniParser.Text = "打开php.ini解析器";
+            this.btnOpenPhpIniParser.Text = "编辑配置";
             this.btnOpenPhpIniParser.UseVisualStyleBackColor = true;
             this.btnOpenPhpIniParser.Click += new System.EventHandler(this.btnOpenPhpIniParser_Click);
             // 
             // btnTestUnzip
             // 
-            this.btnTestUnzip.Location = new System.Drawing.Point(12, 217);
+            this.btnTestUnzip.Location = new System.Drawing.Point(355, 120);
             this.btnTestUnzip.Name = "btnTestUnzip";
-            this.btnTestUnzip.Size = new System.Drawing.Size(75, 23);
+            this.btnTestUnzip.Size = new System.Drawing.Size(74, 23);
             this.btnTestUnzip.TabIndex = 1;
-            this.btnTestUnzip.Text = "button1";
+            this.btnTestUnzip.Text = "自动部署";
             this.btnTestUnzip.UseVisualStyleBackColor = true;
             this.btnTestUnzip.Click += new System.EventHandler(this.btnTestUnzip_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "nginx";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "mysqld";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "php-cgi";
+            // 
+            // btnNginxSwitch
+            // 
+            this.btnNginxSwitch.Location = new System.Drawing.Point(110, 18);
+            this.btnNginxSwitch.Name = "btnNginxSwitch";
+            this.btnNginxSwitch.Size = new System.Drawing.Size(75, 23);
+            this.btnNginxSwitch.TabIndex = 5;
+            this.btnNginxSwitch.Text = "启动";
+            this.btnNginxSwitch.UseVisualStyleBackColor = true;
+            this.btnNginxSwitch.Click += new System.EventHandler(this.btnNginxSwitch_Click);
+            // 
+            // btnMysqldSwitch
+            // 
+            this.btnMysqldSwitch.Location = new System.Drawing.Point(110, 51);
+            this.btnMysqldSwitch.Name = "btnMysqldSwitch";
+            this.btnMysqldSwitch.Size = new System.Drawing.Size(75, 23);
+            this.btnMysqldSwitch.TabIndex = 6;
+            this.btnMysqldSwitch.Text = "启动";
+            this.btnMysqldSwitch.UseVisualStyleBackColor = true;
+            this.btnMysqldSwitch.Click += new System.EventHandler(this.btnMysqldSwitch_Click);
+            // 
+            // btnPhpCgiSwitch
+            // 
+            this.btnPhpCgiSwitch.Location = new System.Drawing.Point(110, 85);
+            this.btnPhpCgiSwitch.Name = "btnPhpCgiSwitch";
+            this.btnPhpCgiSwitch.Size = new System.Drawing.Size(75, 23);
+            this.btnPhpCgiSwitch.TabIndex = 7;
+            this.btnPhpCgiSwitch.Text = "启动";
+            this.btnPhpCgiSwitch.UseVisualStyleBackColor = true;
+            this.btnPhpCgiSwitch.Click += new System.EventHandler(this.btnPhpCgiSwitch_Click);
+            // 
+            // btnNginxRestart
+            // 
+            this.btnNginxRestart.Enabled = false;
+            this.btnNginxRestart.Location = new System.Drawing.Point(191, 18);
+            this.btnNginxRestart.Name = "btnNginxRestart";
+            this.btnNginxRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnNginxRestart.TabIndex = 8;
+            this.btnNginxRestart.Text = "重启";
+            this.btnNginxRestart.UseVisualStyleBackColor = true;
+            this.btnNginxRestart.Click += new System.EventHandler(this.btnNginxRestart_Click);
+            // 
+            // btnMysqldRestart
+            // 
+            this.btnMysqldRestart.Enabled = false;
+            this.btnMysqldRestart.Location = new System.Drawing.Point(191, 51);
+            this.btnMysqldRestart.Name = "btnMysqldRestart";
+            this.btnMysqldRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnMysqldRestart.TabIndex = 9;
+            this.btnMysqldRestart.Text = "重启";
+            this.btnMysqldRestart.UseVisualStyleBackColor = true;
+            // 
+            // btnPhpCgiRestart
+            // 
+            this.btnPhpCgiRestart.Enabled = false;
+            this.btnPhpCgiRestart.Location = new System.Drawing.Point(191, 85);
+            this.btnPhpCgiRestart.Name = "btnPhpCgiRestart";
+            this.btnPhpCgiRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnPhpCgiRestart.TabIndex = 10;
+            this.btnPhpCgiRestart.Text = "重启";
+            this.btnPhpCgiRestart.UseVisualStyleBackColor = true;
+            // 
+            // cron
+            // 
+            this.cron.Enabled = true;
+            this.cron.Interval = 500;
+            this.cron.Tick += new System.EventHandler(this.cron_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(272, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "编辑配置";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnStartAll
+            // 
+            this.btnStartAll.Location = new System.Drawing.Point(110, 120);
+            this.btnStartAll.Name = "btnStartAll";
+            this.btnStartAll.Size = new System.Drawing.Size(75, 23);
+            this.btnStartAll.TabIndex = 12;
+            this.btnStartAll.Text = "全部启动";
+            this.btnStartAll.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(272, 51);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "编辑配置";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(353, 18);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "打开首页";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(353, 51);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "控制台";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // btnVersionSwitch
+            // 
+            this.btnVersionSwitch.Location = new System.Drawing.Point(354, 85);
+            this.btnVersionSwitch.Name = "btnVersionSwitch";
+            this.btnVersionSwitch.Size = new System.Drawing.Size(75, 23);
+            this.btnVersionSwitch.TabIndex = 16;
+            this.btnVersionSwitch.Text = "切换版本";
+            this.btnVersionSwitch.UseVisualStyleBackColor = true;
+            // 
+            // labelNginx
+            // 
+            this.labelNginx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelNginx.Location = new System.Drawing.Point(67, 23);
+            this.labelNginx.Name = "labelNginx";
+            this.labelNginx.Size = new System.Drawing.Size(37, 14);
+            this.labelNginx.TabIndex = 17;
+            this.labelNginx.Text = "     ";
+            // 
+            // labelMysqld
+            // 
+            this.labelMysqld.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelMysqld.Location = new System.Drawing.Point(66, 56);
+            this.labelMysqld.Name = "labelMysqld";
+            this.labelMysqld.Size = new System.Drawing.Size(37, 14);
+            this.labelMysqld.TabIndex = 18;
+            this.labelMysqld.Text = "     ";
+            // 
+            // labelPhpCgi
+            // 
+            this.labelPhpCgi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelPhpCgi.Location = new System.Drawing.Point(67, 90);
+            this.labelPhpCgi.Name = "labelPhpCgi";
+            this.labelPhpCgi.Size = new System.Drawing.Size(37, 14);
+            this.labelPhpCgi.TabIndex = 19;
+            this.labelPhpCgi.Text = "     ";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(444, 156);
+            this.Controls.Add(this.labelPhpCgi);
+            this.Controls.Add(this.labelMysqld);
+            this.Controls.Add(this.labelNginx);
+            this.Controls.Add(this.btnVersionSwitch);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnStartAll);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPhpCgiRestart);
+            this.Controls.Add(this.btnMysqldRestart);
+            this.Controls.Add(this.btnNginxRestart);
+            this.Controls.Add(this.btnPhpCgiSwitch);
+            this.Controls.Add(this.btnMysqldSwitch);
+            this.Controls.Add(this.btnNginxSwitch);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTestUnzip);
             this.Controls.Add(this.btnOpenPhpIniParser);
             this.Name = "FormMain";
             this.Text = "WNMPanel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +284,25 @@
 
         private System.Windows.Forms.Button btnOpenPhpIniParser;
         private System.Windows.Forms.Button btnTestUnzip;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnNginxSwitch;
+        private System.Windows.Forms.Button btnMysqldSwitch;
+        private System.Windows.Forms.Button btnPhpCgiSwitch;
+        private System.Windows.Forms.Button btnNginxRestart;
+        private System.Windows.Forms.Button btnMysqldRestart;
+        private System.Windows.Forms.Button btnPhpCgiRestart;
+        private System.Windows.Forms.Timer cron;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStartAll;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnVersionSwitch;
+        private System.Windows.Forms.Label labelNginx;
+        private System.Windows.Forms.Label labelMysqld;
+        private System.Windows.Forms.Label labelPhpCgi;
     }
 }
 
